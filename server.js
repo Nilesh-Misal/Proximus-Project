@@ -52,10 +52,10 @@ app.use(
     
   connection(mysql,{
       
-      host: 'localhost',  
-      user: 'root',
-      password : '',
-      database:'test1',
+      host: 'proximusdb.cns4bogu4wnd.us-east-1.rds.amazonaws.com',  
+      user: 'test',
+      password : 'jampot321',
+      database:'proximusdatabase',
       port : 3306,  
 
   },'pool')  
