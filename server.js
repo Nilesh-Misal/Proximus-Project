@@ -49,15 +49,15 @@ app.use('/images', express.static(__dirname + '/images'));
 
 //var pool;
 app.use(
-  // pool=mysql.createConnection({
+  pool=mysql.createConnection({
 
-  //   host            : 'proximusdb.cns4bogu4wnd.us-east-1.rds.amazonaws.com',
-  //   user            : 'test',
-  //   password        : 'jampot321',
-  //   database        : 'proximusdatabase',
-  //   connectionLimit : 10,               // this is the max number of connections before your pool starts waiting for a release
-  //   multipleStatements : true  
-  // })
+    host            : 'proximusdb.cns4bogu4wnd.us-east-1.rds.amazonaws.com',
+    user            : 'test',
+    password        : 'jampot321',
+    database        : 'proximusdatabase',
+    connectionLimit : 10,               // this is the max number of connections before your pool starts waiting for a release
+    multipleStatements : true  
+  }))
 
 
 //    mysql.createPool({
@@ -70,16 +70,16 @@ app.use(
 //     multipleStatements : true           // I like this because it helps prevent nested sql statements, it can be buggy though, so be careful
 // })
     
-  connection(mysql,{
+//   connection(mysql,{
       
-      host: 'localhost',  
-      user: 'root',
-      password : '',
-      database:'test1',
-      port : 3306,  
+//       host: 'localhost',  
+//       user: 'root',
+//       password : '',
+//       database:'test1',
+//       port : 3306,  
 
-  })  
-);
+//   })  
+// );
 //pool.connect();
 
 // app.post('/customers/add',function(req,res){
