@@ -72,14 +72,14 @@ app.use(
     
   connection(mysql,{
       
-      host: 'proximusdb.cns4bogu4wnd.us-east-1.rds.amazonaws.com',  
-      user: 'test',
-      password : 'jampot321',
-      database:'proximusdatabase',
+      host: 'localhost',  
+      user: 'root',
+      password : 'jampot@123',
+      database:'test1',
       connectionLimit : 10,   
       multipleStatements : true ,    
       port : 3306,
-      timeout:6000
+      //timeout:6000
 
   })  
 );
