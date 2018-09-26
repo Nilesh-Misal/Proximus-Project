@@ -45,7 +45,7 @@ app.get('/', function(req, res) {
 app.use(express.static('public'));
 
 //Serves all the request which includes /images in the url from Images folder
-app.use('/images', express.static(__dirname + '/images'));
+//app.use('/images', express.static(__dirname + '/images'));
 
 // var pool;
 app.use(
