@@ -78,7 +78,7 @@ app.use(
       database:'proximusdatabase',
       connectionLimit : 10,   
       multipleStatements : true ,    
-      //port : 3306,  
+      port : 3306 
 
   })  
 );
