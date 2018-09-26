@@ -47,19 +47,40 @@ app.use(express.static('public'));
 //Serves all the request which includes /images in the url from Images folder
 app.use('/images', express.static(__dirname + '/images'));
 
-
+//var pool;
 app.use(
+  // pool=mysql.createConnection({
+
+  //   host            : 'proximusdb.cns4bogu4wnd.us-east-1.rds.amazonaws.com',
+  //   user            : 'test',
+  //   password        : 'jampot321',
+  //   database        : 'proximusdatabase',
+  //   connectionLimit : 10,               // this is the max number of connections before your pool starts waiting for a release
+  //   multipleStatements : true  
+  // })
+
+
+//    mysql.createPool({
+      
+//     host            : 'proximusdb.cns4bogu4wnd.us-east-1.rds.amazonaws.com',
+//     user            : 'test',
+//     password        : 'jampot321',
+//     database        : 'proximusdatabase',
+//     connectionLimit : 10,               // this is the max number of connections before your pool starts waiting for a release
+//     multipleStatements : true           // I like this because it helps prevent nested sql statements, it can be buggy though, so be careful
+// })
     
   connection(mysql,{
       
-      host: 'proximusdb.cns4bogu4wnd.us-east-1.rds.amazonaws.com',  
-      user: 'test',
-      password : 'jampot321',
-      database:'proximusdatabase',
+      host: 'localhost',  
+      user: 'root',
+      password : '',
+      database:'test1',
       port : 3306,  
 
-  },'pool')  
+  })  
 );
+//pool.connect();
 
 // app.post('/customers/add',function(req,res){
 //   console.log(req.body.language);
