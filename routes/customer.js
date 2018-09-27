@@ -40,7 +40,7 @@ exports.save = function(req,res){
         req.getConnection(function (err, connection) {
         
             var data = {
-                //newcustomer:req.body.newnumber,
+                newcustomer:req.body.newnumber,
                 existingnumber:req.body.existingnumber,
                 language:req.body.language,
                 contactperson    : req.body.cname,
